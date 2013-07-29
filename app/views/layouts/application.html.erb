@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smdsample</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<ul class="nav">
+					<li><%= link_to 'Active Requests', root_path %></li>
+					<li><a href="#">Sent Requests</a></li>
+					<li><a href="#">Received Requests</a></li>
+				</ul>
+				<ul class="nav pull-right">
+					<%= link_to '<i class="icon-plus icon-white"></i> Add Request'.html_safe, new_request_path, class: "btn btn-success" %>
+				</ul>				
+			</div>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+		<div class="span12">
+			 <%= yield %>
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>

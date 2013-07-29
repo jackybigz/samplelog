@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  request_date: 2013-07-26
+  request_smd_number: MyString
+  request_brief_description: MyString
+  request_description: MyText
+  request_supplier: MyString
+  request_colours: MyString
+  request_date_required: 2013-07-26
+  request_required_for: MyString
+  request_comments: MyText
+  request_confirmed_comp_date: 2013-07-26
+  request_received: MyString
+  request_received_date: 2013-07-26
+  request_date_sent: 2013-07-26
+  request_tracking_number: MyString
+  request_confirmed_comp_date: 2013-07-26
+  request_confirmed_comp_date2: 2013-07-26
+  request_confirmed_comp_date3: 2013-07-26
+  request_confirmed_comp_date4: 2013-07-26
+  request_confirmed_comp_date5: 2013-07-26
+  request_confirmed_comp_date6: 2013-07-26
+  tag: MyString
+
+two:
+  request_date: 2013-07-26
+  request_smd_number: MyString
+  request_brief_description: MyString
+  request_description: MyText
+  request_supplier: MyString
+  request_colours: MyString
+  request_date_required: 2013-07-26
+  request_required_for: MyString
+  request_comments: MyText
+  request_confirmed_comp_date: 2013-07-26
+  request_received: MyString
+  request_received_date: 2013-07-26
+  request_date_sent: 2013-07-26
+  request_tracking_number: MyString
+  request_confirmed_comp_date: 2013-07-26
+  request_confirmed_comp_date2: 2013-07-26
+  request_confirmed_comp_date3: 2013-07-26
+  request_confirmed_comp_date4: 2013-07-26
+  request_confirmed_comp_date5: 2013-07-26
+  request_confirmed_comp_date6: 2013-07-26
+  tag: MyString

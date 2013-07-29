@@ -1,0 +1,84 @@
+<%= simple_form_for(@request) do |f| %>
+  <% if @request.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
+
+      <ul>
+      <% @request.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="container">
+
+    <legend>Sample Information</legend>
+
+    <div class="row-fluid">
+    <table class="text-center">
+      <tr>
+        <td class="span3"><%= f.input :request_smd_number, as: :string, label: "SMD Number"%></td>
+        <td class="span3"><%= f.input :request_date, as: :date, start_year: 1999, end_year: 2014, order: [:day, :month, :year], label: "Request Date" %></td><br>
+        <td class="span3"><%= f.input :request_date_required, as: :date, start_year: 1999, end_year: 2014, order: [:day, :month, :year], label: "Required Date" %></td>
+      </tr>
+      
+      <tr>
+        <td class="span3"><%= f.input :request_brief_description, as: :string, label: "Brief Description" %></td>
+        <td class="span3"><%= f.input :request_required_for, as: :string, label: "Customer" %></td>
+      </tr>
+
+      <td class="span3"><%= f.input :request_description, as: :text, label: "Long Description" %></td>
+
+      <tr>
+        <td class="span3"><%= f.input :request_comments, as: :text, label: "Comments" %></td>
+        <td class="span3"><%= f.input :request_supplier, as: :string, label: "Supplier" %></td>
+        <td class="span3"><%= f.input :request_colours, as: :string, label: "Colors" %></td>
+      </tr>
+
+    </table>
+  </div>
+
+    <legend>Confirmed Completion dates</legend>
+
+    <table class="text-center">
+      <tr>
+        <td class="span3"><%= f.input :request_confirmed_comp_date, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year], label: "Confirmed Date 1" %></td>
+        <td class="span3"><%= f.input :request_confirmed_comp_date3, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year], label: "Confirmed Date 3" %></td>
+        <td class="span3"><%= f.input :request_confirmed_comp_date5, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year], label: "Confirmed Date 5" %></td>
+       </tr>
+       <tr> 
+        <td class="span3"><%= f.input :request_confirmed_comp_date2, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year], label: "Confirmed Date 2" %></td>
+        <td class="span3"><%= f.input :request_confirmed_comp_date4, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year], label: "Confirmed Date 4" %></td>
+        <td class="span3"><%= f.input :request_confirmed_comp_date6, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year], label: "Confirmed Date 6" %></td>
+      </tr>
+    </table>
+
+    <legend>Other Information</legend>
+
+    <table class="text-center">
+      <tr>
+        <td class="span3"><%= f.input :request_received, as: :string %></td>
+        <td class="span3"><%= f.input :request_received_date, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year]%></td>
+        <td class="span3"><%= f.input :request_date_sent, as: :date, include_blank: true, default: nil, start_year: Time.now.year, order: [:day, :month, :year] %></td>
+      </tr>
+      <tr>
+        <td class="span3"><%= f.input :request_tracking_number, as: :string %></td>
+        <td class="span3"><%= f.input :tag, label: "Status" %></td>
+      </tr>
+    </table>
+    <br>
+</div>
+
+  <div class="container">
+    <legend></legend>
+    <table>
+      <tr>
+        <td><%= f.button :submit, class: "btn btn-success" %></td>
+      </tr>
+    </table>
+  </div>
+
+
+<% end %>
+

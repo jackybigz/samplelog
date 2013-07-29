@@ -1,0 +1,31 @@
+<div class="row">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="span1">SMD Number</th>
+      <th class="span2">Requested Date </th>
+      <th class="span2">Required Date</th>
+      <th class="span1">Supplier</th>
+      <th class="span2">Description</th>
+      <th class="span2">Customer</th>
+      <th class="span1">Request comments</th>
+      <th class="span1">Completion date</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @requests.each do |request| %>
+      <tr>
+        <td class="span1 text-center"><%= link_to request.request_smd_number, request_path(request) %></td>
+        <td class="span2 text-center"><%= request.request_date  %></td>
+        <td class="span2 text-center"><%= request.request_date_required %></td>
+        <td class="span1 text-center"><%= request.request_supplier %></td>
+        <td class="span2 text-center"><%= request.request_brief_description %></td>
+        <td class="span2 text-center"><%= request.request_required_for %></td>
+        <td class="span1 text-center"><%= request.request_comments %></td>
+        <td class="span1 text-center"><%= request.request_confirmed_comp_date %><br><%= request.request_confirmed_comp_date2 %><br><%= request.request_confirmed_comp_date3 %><br><%= request.request_confirmed_comp_date4 %><br><%= request.request_confirmed_comp_date5 %><br><%= request.request_confirmed_comp_date6 %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>

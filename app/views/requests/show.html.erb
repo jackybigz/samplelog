@@ -1,0 +1,111 @@
+<div class="container">
+
+<legend>Request</legend>
+
+
+<p>
+  <strong>Request date:</strong>
+  <%= @request.request_date %>
+</p>
+
+<p>
+  <strong>Request smd number:</strong>
+  <%= @request.request_smd_number %>
+</p>
+
+<p>
+  <strong>Request brief description:</strong>
+  <%= @request.request_brief_description %>
+</p>
+
+<p>
+  <strong>Request description:</strong>
+  <%= @request.request_description %>
+</p>
+
+<p>
+  <strong>Request supplier:</strong>
+  <%= @request.request_supplier %>
+</p>
+
+<p>
+  <strong>Request colours:</strong>
+  <%= @request.request_colours %>
+</p>
+
+<p>
+  <strong>Request date required:</strong>
+  <%= @request.request_date_required %>
+</p>
+
+<p>
+  <strong>Request required for:</strong>
+  <%= @request.request_required_for %>
+</p>
+
+<p>
+  <strong>Request comments:</strong>
+  <%= @request.request_comments %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date:</strong>
+  <%= @request.request_confirmed_comp_date %>
+</p>
+
+<p>
+  <strong>Request received:</strong>
+  <%= @request.request_received %>
+</p>
+
+<p>
+  <strong>Request received date:</strong>
+  <%= @request.request_received_date %>
+</p>
+
+<p>
+  <strong>Request date sent:</strong>
+  <%= @request.request_date_sent %>
+</p>
+
+<p>
+  <strong>Request tracking number:</strong>
+  <%= @request.request_tracking_number %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date 1:</strong>
+  <%= @request.request_confirmed_comp_date %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date2:</strong>
+  <%= @request.request_confirmed_comp_date2 %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date3:</strong>
+  <%= @request.request_confirmed_comp_date3 %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date4:</strong>
+  <%= @request.request_confirmed_comp_date4 %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date5:</strong>
+  <%= @request.request_confirmed_comp_date5 %>
+</p>
+
+<p>
+  <strong>Request confirmed comp date6:</strong>
+  <%= @request.request_confirmed_comp_date6 %>
+</p>
+
+<%= link_to '<i class="icon-edit icon-white"></i> Edit'.html_safe, edit_request_path(@request), class: "btn btn-success" %>
+<%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, root_path, class: "btn btn-success" %>
+<%= link_to '<i class="icon-trash icon-white"></i> Delete'.html_safe, {:controller => :requests,
+      :action => 'destroy' }, :method => :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+ 
+</div>
