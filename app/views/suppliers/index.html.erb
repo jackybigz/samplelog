@@ -1,0 +1,28 @@
+<div class="container">
+  <legend>Suppliers
+    <%= link_to '<i class="icon-plus icon-white"></i> Add New'.html_safe, new_supplier_path, class: 'btn btn-success pull-right' %>
+  </legend>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th class="span3">Name</th>
+        <th class="span3">Address</th>
+        <th class="span3">Number</th>
+        <th class="span3">Email</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @suppliers.each do |supplier| %>
+        <tr>
+          <td class="span3"><%= link_to supplier.name, supplier_path(supplier) %></td>
+          <td class="span3"><%= supplier.address %></td>
+          <td class="span3"><%= supplier.number %></td>
+          <td class="span3"><%= supplier.email %></td>
+
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

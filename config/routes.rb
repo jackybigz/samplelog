@@ -1,4 +1,16 @@
 Samplelog::Application.routes.draw do
+
+  resources :designers
+
+  resources :customers
+
+  resources :suppliers
+
+  get "suppliers/details"
+  get "suppliers/name"
+  get "suppliers/email"
+  get "suppliers/address"
+  get "suppliers/number"
   resources :requests
 
   root to: "requests#index"

@@ -1,0 +1,29 @@
+<div class="container">
+<legend>Customer
+
+<%= link_to '<i class="icon-plus icon-white"></i> Add New'.html_safe, new_customer_path, class: "btn btn-success pull-right" %>
+</legend>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th class="span3">Name</th>
+      <th class="span3">Address</th>
+      <th class="span3">Email</th>
+      <th class="span3">Number</th>
+
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @customers.each do |customer| %>
+      <tr>
+        <td class="span3"><%= link_to customer.name, customer_path(customer) %></td>
+        <td class="span3"><%= customer.address %></td>
+        <td class="span3"><%= customer.email %></td>
+        <td class="span3"><%= customer.number %></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

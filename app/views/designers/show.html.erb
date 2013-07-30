@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+<p>
+  <strong>Name:</strong>
+  <%= @designer.name %>
+</p>
+
+<hr>
+<%= link_to '<i class="icon-edit icon-white"></i> Edit'.html_safe, edit_designer_path(@designer), class: "btn btn-success" %>
+<%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, designers_path, class: "btn btn-success" %>
+<%= link_to '<i class="icon-trash icon-white"></i> Delete'.html_safe, {:controller => :designers,
+      :action => 'destroy' }, :method => :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+</div>

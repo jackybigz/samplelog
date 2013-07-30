@@ -1,0 +1,38 @@
+<%= simple_form_for(@customer) do |f| %>
+  <% if @customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
+
+      <ul>
+      <% @customer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+
+  <legend><%= @customer.name %> Information</legend>
+  <div class="field">
+    <%= f.input :name %>
+  </div>
+  <div class="field">
+    <%= f.input :address %>
+  </div>
+  <div class="field">
+    <%= f.input :email %>
+  </div>
+  <div class="field">
+    <%= f.input :number %>
+  </div>
+  <div class="container">
+    <legend></legend>
+    <table>
+      <tr>
+        <td><%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, customers_path, class: "btn btn-success" %></td>
+        <td><%= f.button :submit, class: "btn btn-danger" %></td>
+      </tr>
+    </table>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+
+<legend><%= @supplier.name %> </legend>
+<p>
+  <strong>Address:</strong>
+  <%= @supplier.address %>
+</p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @supplier.number %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @supplier.email %>
+</p>
+
+<hr>
+<%= link_to '<i class="icon-edit icon-white"></i> Edit'.html_safe, edit_supplier_path(@supplier), class: "btn btn-success" %>
+<%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, suppliers_path, class: "btn btn-success" %>
+<%= link_to '<i class="icon-trash icon-white"></i> Delete'.html_safe, {:controller => :suppliers,
+      :action => 'destroy' }, :method => :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+</div>

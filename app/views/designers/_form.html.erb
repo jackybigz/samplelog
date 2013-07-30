@@ -1,0 +1,28 @@
+<%= simple_form_for(@designer) do |f| %>
+  <% if @designer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@designer.errors.count, "error") %> prohibited this designer from being saved:</h2>
+
+      <ul>
+      <% @designer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="container">
+  <legend><%= @designer.name %> Information</legend>
+  <div class="field">
+    <%= f.label :name %>
+  </div>
+    <div class="container">
+    <legend></legend>
+    <table>
+      <tr> 
+        <td><%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, designers_path, class: "btn btn-success" %></td>
+        <td><%= f.button :submit, class: "btn btn-danger" %></td>
+      </tr>
+    </table>
+  </div>
+<% end %>
+</div>

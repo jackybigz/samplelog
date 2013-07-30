@@ -1,0 +1,21 @@
+<div class="container">
+<legend>Designers
+
+<%= link_to '<i class="icon-plus icon-white"></i> Add New'.html_safe, new_designer_path, class: 'btn btn-success pull-right' %> </legend>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th  class="span3">Name</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @designers.each do |designer| %>
+      <tr>
+        <td  class="span3"><%= link_to designer.name, designer_path(designer) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
