@@ -25,14 +25,15 @@
       
       <tr>
         <td class="span3"><%= f.input :request_brief_description, as: :string, label: "Brief Description" %></td>
-        <td class="span3"><%= f.input :request_required_for, as: :string, label: "Customer" %></td>
+        <td class="span3"><%= collection_select :request, :request_required_for, @customers, :name, :name %></td>
+        <td class="span3"><%= collection_select :request, :request_designer, @designers, :name, :name %></td>
       </tr>
 
       <td class="span3"><%= f.input :request_description, as: :text, label: "Long Description" %></td>
 
       <tr>
         <td class="span3"><%= f.input :request_comments, as: :text, label: "Comments" %></td>
-        <td class="span3"><%= f.input :request_supplier, as: :string, label: "Supplier" %></td>
+        <td class="span3"><%= collection_select :request, :request_supplier, @suppliers, :name, :name %></td>
         <td class="span3"><%= f.input :request_colours, as: :string, label: "Colors" %></td>
       </tr>
 
@@ -64,7 +65,7 @@
       </tr>
       <tr>
         <td class="span3"><%= f.input :request_tracking_number, as: :string %></td>
-        <td class="span3"><%= f.input :tag, select: ["Active", "Sent", "Received"], label: "Status" %></td>
+
       </tr>
     </table>
     <br>
