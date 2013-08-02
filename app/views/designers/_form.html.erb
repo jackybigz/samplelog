@@ -13,10 +13,10 @@
 <div class="container">
   <legend><%= @designer.name %> Information</legend>
   <div class="field">
-    <%= f.label :name %>
+
+    <%= f.input :name %>
+    <hr>
   </div>
-    <div class="container">
-    <legend></legend>
     <table>
       <tr> 
         <td><%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, designers_path, class: "btn btn-success" %></td>

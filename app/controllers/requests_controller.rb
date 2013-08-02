@@ -5,6 +5,8 @@ class RequestsController < ApplicationController
   # GET /requests.json
   def index
     @requests = Request.all
+    @requests = Request.order("request_date ASC")
+
   end
 
   # GET /requests/1
@@ -77,4 +79,5 @@ class RequestsController < ApplicationController
     def request_params
       params.require(:request).permit(:request_date, :request_smd_number, :request_brief_description, :request_description, :request_supplier, :request_colours, :request_date_required, :request_required_for, :request_designer, :request_comments, :request_confirmed_comp_date, :request_received, :request_received_date, :request_date_sent, :request_tracking_number, :request_confirmed_comp_date, :request_confirmed_comp_date2, :request_confirmed_comp_date3, :request_confirmed_comp_date4, :request_confirmed_comp_date5, :request_confirmed_comp_date6, :supplier, :customer, :designer, :name)
     end
+
 end
