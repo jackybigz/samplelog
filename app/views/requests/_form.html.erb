@@ -25,15 +25,15 @@
       
       <tr>
         <td class="span3"><%= f.input :request_brief_description, as: :string, label: "Brief Description" %></td>
-        <td class="span3"><%= collection_select :request, :request_required_for, @customers, :name, :name %>&nbsp;<p style="margin-bottom: 10px;" class="btn btn-mini btn-success"><i class="icon-plus icon-white"></i><%= link_to @customers, new_customer_path %></p></td>
-        <td class="span3"><%= collection_select :request, :request_designer, @designers, :name, :name %>&nbsp;<p style="margin-bottom: 10px;" class="btn btn-mini btn-success"><i class="icon-plus icon-white"></i><%= link_to @designers, new_designer_path %></p></td>
+        <td class="span3"><%= collection_select :request, :request_required_for, @customers, :name, :name %><span style="margin: 0 0 10px 10px;" class="btn btn-mini btn-success"><%= link_to '<i class="icon-plus icon-white"></i> '.html_safe, new_customer_path %></span></td>
+        <td class="span3"><%= collection_select :request, :request_designer, @designers, :name, :name %><span style="margin: 0 0 10px 10px;" class="btn btn-mini btn-success"><%= link_to '<i class="icon-plus icon-white"></i> '.html_safe, new_designer_path %></span></td>
       </tr>
 
       <td class="span3"><%= f.input :request_description, as: :text, label: "Long Description" %></td>
 
       <tr>
         <td class="span3"><%= f.input :request_comments, as: :text, label: "Comments" %></td>
-        <td class="span3"><%= collection_select :request, :request_supplier, @suppliers, :name, :name %>&nbsp;<p style="margin-bottom: 10px;" class="btn btn-mini btn-success"><i class="icon-plus icon-white"></i><%= link_to @suppliers, new_supplier_path %></p></td>
+        <td class="span3"><%= collection_select :request, :request_supplier, @suppliers, :name, :name %><span style="margin: 0 0 10px 10px;" class="btn btn-mini btn-success"><%= link_to '<i class="icon-plus icon-white"></i> '.html_safe, new_supplier_path %></span></td>
         <td class="span3"><%= f.input :request_colours, as: :string, label: "Colors" %></td>
       </tr>
 
