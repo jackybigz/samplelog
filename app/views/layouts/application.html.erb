@@ -12,9 +12,9 @@
 		<div class="navbar-inner">
 			<div class="container-fluid">
 				<ul class="nav">
-					<li><%= link_to 'Active Requests', root_path %></li>
-					<li><a href="#">Sent Requests</a></li>
-					<li><a href="#">Received Requests</a></li>
+					<li><a href="/tags/active/">Active Requests</a></li>
+					<li><a href="/tags/Sent/">Sent Requests</a></li>
+					<li><a href="/tags/Received/">Received Requests</a></li>
 				</ul>
 				<ul class="nav pull-right">
 					    <div class="btn-group">
@@ -35,7 +35,7 @@
 		</div>
 	</div>
 
-	<div class="row-fluid">
+	<div style="margin-left: 10px;" class="row-fluid">
 		<div class="span12">
 			 <%= yield %>
 		</div>

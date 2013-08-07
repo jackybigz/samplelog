@@ -89,7 +89,7 @@
 </p>
 
 <p>
-  <strong>Third Date:</strong
+  <strong>Third Date:</strong>
   <%= @request.request_confirmed_comp_date3 %>
 </p>
 
@@ -108,9 +108,13 @@
   <%= @request.request_confirmed_comp_date6 %>
 </p>
 
+<legend>Status</legend>
+<p>
+  <%= @request.tag_list %>
+
+</p>
 
 
-  <%= @request.request_confirmed_comp_date6 %>
 
 
 <%= link_to '<i class="icon-edit icon-white"></i> Edit'.html_safe, edit_request_path(@request), class: "btn btn-success" %>

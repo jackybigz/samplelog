@@ -7,6 +7,9 @@ gem 'rails', '4.0.0'
 gem 'pg'
 gem 'simple_form'
 gem 'thin'
+gem 'better_errors'
+gem 'acts-as-taggable-on'
+gem 'binding_of_caller'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
