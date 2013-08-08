@@ -8,7 +8,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'thin'
 gem 'better_errors'
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', git: 'git://github.com/mbleigh/acts-as-taggable-on.git'
 gem 'binding_of_caller'
 
 # Use SCSS for stylesheets
