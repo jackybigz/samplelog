@@ -15,8 +15,20 @@
 					<li><a href="/tags/active/">Active Requests</a></li>
 					<li><a href="/tags/Sent/">Sent Requests</a></li>
 					<li><a href="/tags/Received/">Received Requests</a></li>
+
 				</ul>
 				<ul class="nav pull-right">
+						<div class="btn-group">
+							<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
+								<i class="icon-book icon-white"></i>
+								Help
+								<i class="icon-chevron-down icon-white"></i>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="/other/keybinds/index.htm">Photoshop Shortcuts</a></li>
+								<li><a href="/other/ned/index.htm">Ned Graphics Help</a></li>
+							</ul>
+						</div>
 					    <div class="btn-group">
 					    	<a class="btn btn-success dropdown-toggle" data-toggle="dropdown" href="#">
 					    		<i class="icon-edit icon-white"></i>
@@ -29,7 +41,9 @@
 					   			<li> <%= link_to 'Designers', designers_path %> </li>
 					    	</ul>
 					    </div>
-					<%= link_to '<i class="icon-plus icon-white"></i> Add Request'.html_safe, new_request_path, class: "btn btn-success" %>
+					    <div class="pull-right">
+							<%= link_to '<i class="icon-plus icon-white"></i> Add Request'.html_safe, new_request_path, class: "btn btn-success" %>
+						</div>
 				</ul>				
 			</div>
 		</div>
