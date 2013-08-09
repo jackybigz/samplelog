@@ -16,4 +16,6 @@ class Request < ActiveRecord::Base
 	accepts_nested_attributes_for :status
 
 	acts_as_taggable_on :requests, :tags, :tag_list
+
+	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
 end
