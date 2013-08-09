@@ -18,13 +18,11 @@ class Request < ActiveRecord::Base
 	
 	acts_as_taggable_on :requests, :tags, :tag_list
 
-<<<<<<< HEAD
+
 	has_attached_file :sample_image, styles: {
 	    thumb: '100x100>',
     	square: '200x200#',
     	medium: '300x300>'
     }
-=======
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
->>>>>>> 905d73f745947c325a1dc4b452a5bda0ea929f01
 end
