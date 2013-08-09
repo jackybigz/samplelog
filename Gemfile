@@ -10,6 +10,7 @@ gem 'thin'
 gem 'better_errors'
 gem 'acts-as-taggable-on', git: 'git://github.com/mbleigh/acts-as-taggable-on.git'
 gem 'binding_of_caller'
+gem "paperclip", "~> 3.0"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

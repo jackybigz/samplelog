@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
 <p>
-  <strong>Name:</strong>
+  <strong>Title:</strong>
   <%= @status.name %>
 </p>
 
-<%= link_to 'Edit', edit_status_path(@status) %> |
-<%= link_to 'Back', statuses_path %>
+<hr>
+<%= link_to '<i class="icon-edit icon-white"></i> Edit'.html_safe, edit_status_path(@status), class: "btn btn-success" %>
+<%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, statuses_path, class: "btn btn-success" %>
+<%= link_to '<i class="icon-trash icon-white"></i> Delete'.html_safe, {:controller => :statuses,
+      :action => 'destroy' }, :method => :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+</div>

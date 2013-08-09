@@ -1,4 +1,4 @@
-<%= simple_form_for(@request) do |f| %>
+<%= simple_form_for @request, :html => { :multipart => true } do |f| %>
   <% if @request.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
@@ -17,6 +17,9 @@
 
     <div class="row-fluid">
     <table class="text-center table">
+      <tr>
+        <td class="span4"><%= f.file_field :sample_image, label: "Upload an Image" %></td>
+      </tr>
       <tr>
         <td class="span4"><%= f.input :request_smd_number, as: :string, label: "SMD Number"%></td>
         <td class="span4"><%= f.input :request_date, as: :date, start_year: 1999, end_year: 2014, order: [:day, :month, :year], label: "Request Date" %></td>

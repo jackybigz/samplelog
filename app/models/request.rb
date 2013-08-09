@@ -9,11 +9,18 @@ class Request < ActiveRecord::Base
 	belongs_to :supplier
 	belongs_to :status
 	has_many :tags
+	has_many :images
 	
 	accepts_nested_attributes_for :customer
 	accepts_nested_attributes_for :designer
 	accepts_nested_attributes_for :supplier
 	accepts_nested_attributes_for :status
-
+	
 	acts_as_taggable_on :requests, :tags, :tag_list
+
+	has_attached_file :sample_image, styles: {
+	    thumb: '100x100>',
+    	square: '200x200#',
+    	medium: '300x300>'
+    }
 end

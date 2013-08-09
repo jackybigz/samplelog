@@ -1,6 +1,6 @@
 <div class="container">
 
-
+<div class="span6 pull-left">
 <legend>General Information</legend>
 <table>
     <tr>
@@ -114,12 +114,16 @@
 
 </p>
 
-
-
-
 <%= link_to '<i class="icon-edit icon-white"></i> Edit'.html_safe, edit_request_path(@request), class: "btn btn-success" %>
 <%= link_to '<i class="icon-circle-arrow-left icon-white"></i> Back'.html_safe, root_path, class: "btn btn-success" %>
 <%= link_to '<i class="icon-trash icon-white"></i> Delete'.html_safe, {:controller => :requests,
       :action => 'destroy' }, :method => :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
- 
+
+</div>
+
+<div class="span6 pull-right">
+<%= image_tag @request.sample_image.url, style: "padding: 40px;" %>
+</div>
+
+
 </div>
