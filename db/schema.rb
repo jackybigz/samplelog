@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20130809081821) do
-=======
-ActiveRecord::Schema.define(version: 20130808202113) do
->>>>>>> 905d73f745947c325a1dc4b452a5bda0ea929f01
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,7 +51,7 @@ ActiveRecord::Schema.define(version: 20130808202113) do
     t.date     "request_confirmed_comp_date4"
     t.date     "request_confirmed_comp_date5"
     t.date     "request_confirmed_comp_date6"
-    t.string   "tags"
+    t.string   "tag"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "request_designer"
@@ -63,13 +59,10 @@ ActiveRecord::Schema.define(version: 20130808202113) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-<<<<<<< HEAD
     t.string   "sample_image_file_name"
     t.string   "sample_image_content_type"
     t.integer  "sample_image_file_size"
     t.datetime "sample_image_updated_at"
-=======
->>>>>>> 905d73f745947c325a1dc4b452a5bda0ea929f01
   end
 
   create_table "statuses", force: true do |t|
